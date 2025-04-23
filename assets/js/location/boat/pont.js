@@ -19,14 +19,19 @@ function pont(){
     bttn2.appendChild(textBttn2)
 
     const bttn3 = document.createElement("button")
-    const textBttn3 = document.createTextNode("Agresser gratuitement un de vos matelots squelette")
+    const textBttn3 = document.createTextNode("Aller à la barre")
     bttn3.appendChild(textBttn3)
+
+    const bttn4 = document.createElement("button")
+    const textBttn4 = document.createTextNode("Agresser gratuitement un de vos matelots squelette")
+    bttn4.appendChild(textBttn4)
 
     callChoice()
     const choiceDiv = document.querySelector(".choiceDiv");
     choiceDiv.appendChild(bttn1)
     choiceDiv.appendChild(bttn2)
     choiceDiv.appendChild(bttn3)
+    choiceDiv.appendChild(bttn4)
 
     bttn1.addEventListener("click", () =>{
         goToScreen(startCabine)
@@ -35,6 +40,9 @@ function pont(){
         goToScreen(proue)
     })
     bttn3.addEventListener("click", () =>{
+        goToScreen(barre)
+    })
+    bttn4.addEventListener("click", () =>{
         combat("Larbin squelette")
     })
 }
