@@ -18,15 +18,23 @@ function pont(){
     const textBttn2 = document.createTextNode("Aller à la proue")
     bttn2.appendChild(textBttn2)
 
+    const bttn3 = document.createElement("button")
+    const textBttn3 = document.createTextNode("Agresser gratuitement un de vos matelots squelette")
+    bttn3.appendChild(textBttn3)
+
     callChoice()
     const choiceDiv = document.querySelector(".choiceDiv");
     choiceDiv.appendChild(bttn1)
     choiceDiv.appendChild(bttn2)
+    choiceDiv.appendChild(bttn3)
 
     bttn1.addEventListener("click", () =>{
         goToScreen(startCabine)
     })
     bttn2.addEventListener("click", () =>{
+        goToScreen(proue)
+    })
+    bttn3.addEventListener("click", () =>{
         goToScreen(proue)
     })
 }

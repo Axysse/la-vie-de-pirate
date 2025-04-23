@@ -14,12 +14,21 @@ function startCabine(){
     const textBttn1 = document.createTextNode("Aller sur le pont")
     bttn1.appendChild(textBttn1)
 
+    const bttn2 = document.createElement("button")
+    const textBttn2 = document.createTextNode("Attendre")
+    bttn2.appendChild(textBttn2)
+
     callChoice()
     const choiceDiv = document.querySelector(".choiceDiv");
     choiceDiv.appendChild(bttn1)
+    choiceDiv.appendChild(bttn2)
 
     bttn1.addEventListener("click", () =>{
         goToScreen(pont)
+    })
+
+    bttn2.addEventListener("click", () =>{
+        time()
     })
 
 }

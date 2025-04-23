@@ -1,4 +1,5 @@
 const buttonUpRep = document.getElementById("cheatRepUp")
+// const wait = document.getElementById("cheatRepUp")
 
 function addReputation() {
     if(reputation == 100){
@@ -17,3 +18,7 @@ function addReputation() {
 buttonUpRep.addEventListener("click", () => {
     addReputation()
 })
+
+// wait.addEventListener("click", () => {
+//     time()
+// })
