@@ -35,6 +35,6 @@ function pont(){
         goToScreen(proue)
     })
     bttn3.addEventListener("click", () =>{
-        goToScreen(proue)
+        combat("Larbin squelette")
     })
 }

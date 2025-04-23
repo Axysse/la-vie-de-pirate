@@ -1,8 +1,6 @@
 function saveGame() {
     const gameState = {
         // relations: relations,
-        // guntherEventProgression,
-        // mayorQuest,
         reputation: reputation,
         title: title,
         argent: argent,

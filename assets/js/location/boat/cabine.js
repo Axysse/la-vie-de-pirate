@@ -18,10 +18,15 @@ function startCabine(){
     const textBttn2 = document.createTextNode("Attendre")
     bttn2.appendChild(textBttn2)
 
+    const bttn3 = document.createElement("button")
+    const textBttn3 = document.createTextNode("Dormir jusqu'à l'aube")
+    bttn3.appendChild(textBttn3)
+
     callChoice()
     const choiceDiv = document.querySelector(".choiceDiv");
     choiceDiv.appendChild(bttn1)
     choiceDiv.appendChild(bttn2)
+    choiceDiv.appendChild(bttn3)
 
     bttn1.addEventListener("click", () =>{
         goToScreen(pont)
@@ -29,6 +34,10 @@ function startCabine(){
 
     bttn2.addEventListener("click", () =>{
         time()
+    })
+
+    bttn3.addEventListener("click", () =>{
+        aube()
     })
 
 }
