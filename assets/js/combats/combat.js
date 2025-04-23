@@ -56,14 +56,18 @@ function combat(enemyName){
             const attackButton = document.createElement("button");
             attackButton.textContent = attack.name;
             attackButton.addEventListener("click", () => {
-                enemyHP -= attack.damage;
-                console.log(`Vous infligez ${attack.damage} dégâts à ${enemy.name}.`);
-                if (enemyHP <= 0) {
-                    endCombat(true, enemy);
-                } else {
-                    isPlayerTurn = false;
-                    enemyTurn();
-                }
+                executePlayerAttack(attack)
+                setTimeout(()=> {
+                    enemyHP -= attack.damage;
+                    console.log(`Vous infligez ${attack.damage} dégâts à ${enemy.name}.`);
+                    if (enemyHP <= 0) {
+                        endCombat(true, enemy);
+                    } else {
+                        isPlayerTurn = false;
+                        enemyTurn();
+                    }
+                }, 2000);
+
             });
             attackContainer.appendChild(attackButton);
         });
@@ -81,7 +85,11 @@ function combat(enemyName){
         attackImage.src = attack.image;
         attackImage.alt = attack.name;
         attackImage.classList.add("attack-image"); // Ajoute une classe pour le style
+
+        const attackText = document.createElement("p")
+        attackText.innerText = `L'ennemi utilise ${attack.name}, infligeant ${attack.damage} dégâts.`
         gameArea.appendChild(attackImage);
+        gameArea.appendChild(attackText);
     
         // Délai pour montrer l'attaque, puis revenir à l'image de l'ennemi
         setTimeout(() => {
@@ -96,7 +104,7 @@ function combat(enemyName){
                    // Retour à l'image de l'ennemi
                    updateEnemyDisplay();
                    playerTurn(); // Retourne au tour du joueur
-               }, 3000); // Affiche l'attaque pendant 2 secondes
+               }, 2000); // Affiche l'attaque pendant 2 secondes
            
                console.log(`L'ennemi utilise ${attack.name}, infligeant ${attack.damage} dégâts.`);
            }
@@ -113,7 +121,7 @@ function combat(enemyName){
         const backButton = document.createElement("button");
         backButton.textContent = "Victoire!";
         backButton.addEventListener("click", () => {
-                goToScreen(victorySuccube); // Remplacer par la fonction pour revenir au menu principal 
+                goToScreen(pont); // Remplacer par la fonction pour revenir au menu principal 
         });
         gameArea.appendChild(backButton);
     }
@@ -127,28 +135,15 @@ function combat(enemyName){
         attackImage.src = attack.image;
         attackImage.alt = attack.name;
         attackImage.classList.add("attack-image");
+        const attackText = document.createElement("p")
+        attackText.innerText = `Tu utilise ${attack.name}, infligeant ${attack.damage} dégâts.`
         gameArea.appendChild(attackImage);
+        gameArea.appendChild(attackText);
     
         console.log(`Tu utilises ${attack.name}, infligeant ${attack.damage} dégâts.`);
     
         // Délai pour afficher l'animation d'attaque du joueur
         setTimeout(() => {
-            // Réduit les PV de l'ennemi
-            currentEnemy.hp -= attack.damage;
-    
-            // Vérifie si l'ennemi est K.O.
-            if (currentEnemy.hp <= 0) {
-                gameArea.innerHTML = `<h2>${currentEnemy.name} a été vaincu !</h2>`;
-                return;
-            }
-    
-            // Retour à l'image de l'ennemi
-            updateEnemyDisplay();
-    
-            // Passe au tour de l'ennemi après un délai
-            setTimeout(() => {
-                enemyTurn();
-            }, 1500); // Temps d'attente avant que l'ennemi attaque
         }, 2000); // Temps pendant lequel l'animation d'attaque du joueur est visible
     }
 
