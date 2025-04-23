@@ -55,6 +55,7 @@ function combat(enemyName){
         attacks.forEach(attack => {
             const attackButton = document.createElement("button");
             attackButton.textContent = attack.name;
+            attackButton.className = "ml-4"
             attackButton.addEventListener("click", () => {
                 executePlayerAttack(attack)
                 setTimeout(()=> {
