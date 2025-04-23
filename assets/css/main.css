@@ -1,0 +1,56 @@
+h3{
+    color: rgb(209, 203, 203);
+}
+
+body{
+    color: rgb(209, 203, 203);
+}
+
+/* button{
+    margin-left: 25%;
+} */
+
+.choiceDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.hidden{
+    display: none;
+}
+
+.imgDiv{
+    height: 400px;
+}
+
+.dialogDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.eventDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    cursor: pointer;
+    align-items: center;
+}
+
+.eventDiv img{
+    height: 400px;
+    width: 500px;
+}
+
+.dialogDiv img{
+    height: 150px;
+    width: 125px;
+}
+/* 
+button{
+    width : 100px;
+} */

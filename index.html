@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La vie de pirate</title>
-</head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./assets/CSS/main.css" rel="stylesheet" />
     
+</head>
+<body class="bg-sky-950">
+    <header>
+
+    </header>
+    <section class="flex flex-row min-h-screen border-4 border-amber-400 rounded-xl gap-3">
+        <article class="m-4 w-[25%] border border-2 border-gray-300 rounded-xl">
+            <div class="flex flex-col mt-4 justify-center items-center">
+                <h3>Nom personnage</h3>
+                <img src="./assets/img/char/pirate.png" class="w-32">
+                <div>
+                    <p>PV : <span id="pvIn"></span></p>
+                    <p>Titre : <span id="titleIn"></span></p>
+                    <p>Réputation : <span id="reputationIn"></span></p>
+                    <p>Argent : <span id="argentIn"></span> ducats</p>
+                </div>
+                <div class="mt-5">
+                    <p><span id="periode">Aube</span></p>
+                </div>
+                <div class="mt-5">
+                    <!-- <button id="bttnRelations">Relations :</button> -->
+                </div>
+                <div class="mt-12">
+                    <button id="saveButton">Sauvegarder</button>
+                    <button id="loadButton">Charger</button>
+                </div>
+                <div class="mt-5">
+                    <button id="resetButton">Effacer sauvegarde</button>
+                </div>
+            </div>
+            <div id="cheatArea" class="border border-1 border-gray-300 rounded-xl m-8 p-16 flex flex-row gap-8">
+                <button id="cheatRepUp">Up rep</button>
+            </div>
+        </article>
+        <article id="gameArea" class="m-4 w-[75%] border border-2 border-gray-300 rounded-xl">
+            <div class="overflow-x-hidden m-2 overflow-y-scroll max-h-screen">
+                <p class="text-2xl font-extrabold text-center">LA VIE DE PIRATE C'EST LA PLUS BELLE DES VIES!</p>
+            </div>
+        </article>
+    </section>
+    <script src="assets/JS/common.js"></script>
+    <script src="assets/JS/time.js"></script>
+    <script src="assets/JS/save.js"></script>
+    <script src="assets/JS/historique.js"></script>
+    <script src="assets/JS/stats.js"></script>
+    <script src="assets/JS/cheat.js"></script>
+    <script src="assets/JS/start.js"></script>
+    <script src="assets/JS/location/boat/cabine.js"></script>
+    <script src="assets/JS/location/boat/pont.js"></script>
+    <script src="assets/JS/location/boat/proue.js"></script>
 </body>
+<footer>
+
+</footer>
 </html>
