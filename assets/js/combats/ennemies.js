@@ -4,7 +4,7 @@ const enemies = [
         hp: 20, 
         image: "./assets/img/combats/skeleton.jpg",
         attacks: [
-            { name: "Coup minable", damage: 5, image: "./assets/img/combats/Nyeh.jpg"  },
+            { name: "NYYEEEEEH", damage: 5, image: "./assets/img/combats/Nyeh.jpg"  },
         ]
     },
 ];
