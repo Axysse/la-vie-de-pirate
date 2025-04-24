@@ -1,0 +1,36 @@
+{
+    "events": [
+        {
+            "id": "mordechai01",
+            "type": "dialogue",
+            "npc": "mordechai",
+            "trigger": "mordechai01",
+            "dialogue": [
+                {
+                    "text": "Trouve et forme un équipage, petit capitaine.",
+                    "portrait": "mordechai.jpg"
+                },
+                {
+                    "text": "Rends moi ma force d'antan.",
+                    "portrait": "mordechai.jpg"
+                }
+            ]
+        },
+        {
+            "id": "mordechai02",
+            "type": "dialogue",
+            "npc": "mordechai",
+            "trigger": "mordechai02",
+            "dialogue": [
+                {
+                    "text": "Ca gaze ma biche?",
+                    "portrait": "mordechai.jpg"
+                },
+                {
+                    "text": "Gros baiseur ou pas?",
+                    "portrait": "mordechai.jpg"
+                }
+            ]
+        }
+    ]
+}
